@@ -9,6 +9,7 @@ import android.view.View
 import android.R.attr.button
 import android.R.attr.button
 import android.provider.Settings
+import android.widget.ArrayAdapter
 import android.widget.Toast
 
 
@@ -21,7 +22,9 @@ class MyActivity : Activity() {
 
         //val button_buy = findViewById<Button>(R.id.button_buy);
         //val Button button_buy = findViewById(R.id.button_buy
-
+val NewList= arrayListOf("Bitcoin", "Xem")
+        val listAdapter=ArrayAdapter(this,android.R.layout.simple_list_item_1,NewList)
+        list.adapter=listAdapter
 
         button_buy.setOnClickListener({
             Toast.makeText(this, "Choosen one", Toast.LENGTH_LONG).show()
